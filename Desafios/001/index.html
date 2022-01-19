@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <h1>Horas do Dia</h1>
+    <div id="quadro">
+        <div id="display_horas"></div>
+    </div>
+    <script>
+        var data = new Date()
+        var hora = data.getHours()
+        var printhrs = document.getElementById('display_horas')
+        var bg = document.getElementById('body')
+        printhrs.innerText = `Agora sao ${hora} horas.`
+        if(hora <= 12){
+            bg.style.background = "rgb(207, 190, 111)"
+        } else if(hora <= 18){
+            bg.style.background = "rgb(207, 138, 98)"
+        } else{
+            bg.style.background = "rgb(32, 46, 63)"
+        }
+    </script>
+</body>
+</html>

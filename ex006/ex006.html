@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidor de Velocidade</title>
+</head>
+<body>
+    <h1>Sistemas de multas</h1>
+    <p>Velocidade do carro</p>
+    <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Verificar" onclick="clicar()">
+
+    <div id="res"></div>
+
+    <script>
+
+        function clicar(){
+            var txtv = document.getElementById('txt1')
+            var vel = Number(txtv.value)
+            var res = document.getElementById('res')
+            res.innerHTML += `Sua velocidade atual e de <strong>${vel}</strong> km/h`
+            if(vel > 60){
+                res.innerHTML += `<br>Toma <strong>Multa</strong> por excesso de velocidade<br>`
+            } 
+            res.innerHTML += `<br>Use sempre o cinto de seguranca`
+            
+        }
+        
+    </script>
+</body>
+</html>
